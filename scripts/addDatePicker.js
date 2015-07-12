@@ -1,4 +1,5 @@
-﻿Modernizr.load({
+﻿/// <reference path="../typings/jquery/jquery.d.ts"/>
+Modernizr.load({
     test: Modernizr.inputtypes.date,
     nope: ['../styles/jquery-ui.min.css', '//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js'],
     complete: function () {
@@ -12,7 +13,14 @@
 });
 
 
+
 $(function () {
+    /*$('#datetabs a').click(function (e) {
+        e.preventDefault();
+        $(this).tab('show');
+    });*/
+    //$('#datetabs a:first').tab('show');
+
     $(".lnkToday").click(function () {
         var d = new Date();
         var dd = ("0" + d.getDate()).slice(-2);
