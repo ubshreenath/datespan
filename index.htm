@@ -68,7 +68,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-md-12 text-center">
-                                    <input type="button" class="btn btn-primary btn-lg" value="Calculate" id="btnCalculate" />
+                                    <input type="button" class="btn btn-primary btn-lg" value="Calculate" id="btnCalculate1" />
                                 </div>
                             </div>
                             <div class="row">
@@ -94,17 +94,20 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-md-4 text-center"></div>
+                                <div class="col-md-4 text-center">
+                                    <input type="radio" value="add" name="addsub" id="add" checked> Add
+                                    <input type="radio" value="sub" name="addsub" id="sub"> Subtract
+                                </div>
                                 <div class="col-md-4 text-center">
                                     <input class="form-control input-lg" type="number" name="n" id="n"/>
                                     
                                 </div>
                                 <div class="col-md-4 text-center">
                                     <select class="form-control input-lg" name="f" id="f">
-                                        <option value="d">Days</option>
-                                        <option value="w">Weeks</option>
-                                        <option value="m">Months</option>
-                                        <option value="y">Years</option>
+                                        <option value="days">Days</option>
+                                        <option value="weeks">Weeks</option>
+                                        <option value="months">Months</option>
+                                        <option value="years">Years</option>
                                     </select>
                                 </div>
                             </div>
@@ -115,8 +118,8 @@
                             </div>
                             <div class="row">
                                 <div class="text-center panel panel-primary hide">
-                                    <div class="panel-heading">Time Span in:</div>
-                                    <div class="panel-body" id="pnlResult"></div>
+                                    <div class="panel-heading" id="pnlResult2hdr">The date is:</div>
+                                    <div class="panel-body" id="pnlResult2"></div>
                                 </div>
                             </div>
                         </section>
@@ -135,7 +138,7 @@
             </div>
         </div>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-        <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+        <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>        
         <script src="scripts/modernizr-custom.js"></script>
         <script src="scripts/moment.min.js"></script>
         <script src="scripts/addDatePicker.js"></script>

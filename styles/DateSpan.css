@@ -45,20 +45,20 @@
 
     .row > div
     {
-        line-height:57px;
+        line-height:45px;
         vertical-align:middle;
         padding:6px 12px;
-        min-height:57px;
+        min-height:45px;
         
     }
 
-        .row > div > input
+        .row > div > input[date]
         {
             line-height:22px;
             vertical-align:middle;
             width:100%;
             padding:6px 12px;
-            min-height:45px;
+            /*min-height:57px;*/
         }
 
     .row .panel
