@@ -45,7 +45,13 @@ $(function () {
         var years = span / (1000 * 60 * 60 * 24 * 365);
 
         //var dtSpan = new Date(span);
-        $("#pnlResult").html("<p>Seconds : " + seconds + "</p><p>Minutes : " + minutes + "</p><p>Hours : " + hours + "</p><p>Days : " + days + "</p><p>Weeks : " + weeks + "</p><p>Months : " + months + "</p><p>Years : " + years + "</p>").parent().hide().removeClass("hide").slideDown("slow");
+        $("#pnlResult").html("<p>Seconds : " + seconds + "</p><p>Minutes : " + minutes + "</p><p>Hours : " + hours + "</p><p>Days : " + days + "</p><p>Weeks : " + weeks + "</p><p>Months : " + months + "</p><p>Years : " + years + "</p>")
+						.parent()
+						.hide()
+						.removeClass("hide")
+						.slideDown("slow");
+		$("body").animate({scrollTop: $("#pnlResult").offset().top}, 800);
+						
         //alert(dtSpan.getHours());
     });
     $("#btnCalculate2").click(function () {
@@ -65,6 +71,7 @@ $(function () {
         }
         //console.log(dt2.calendar());
         $("#pnlResult2hdr").html(n + " " + unit + (addsub==0?" before ":" from ") + temp.calendar() + " is: ");
-        $("#pnlResult2").html(dt1.calendar() + " ( " + dt1.format("dddd, MMMM Do YYYY") + " )").parent().hide().removeClass("hide").slideDown("slow");
+        $("#pnlResult2").html(dt1.calendar() + " ( " + dt1.format("dddd, MMMM Do YYYY") + " )").parent().hide().removeClass("hide").slideDown("slow").scrollTop();
+		$("body").animate({scrollTop: $("#pnlResult2hdr").offset().top}, 800);
     });
 });
