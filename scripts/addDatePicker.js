@@ -44,8 +44,8 @@ $(function () {
         var weeks = span / (1000 * 60 * 60 * 24 * 7);
         var years = span / (1000 * 60 * 60 * 24 * 365);
 
-        //var dtSpan = new Date(span);
-        $("#pnlResult").html("<p>Seconds : " + seconds + "</p><p>Minutes : " + minutes + "</p><p>Hours : " + hours + "</p><p>Days : " + days + "</p><p>Weeks : " + weeks + "</p><p>Months : " + months + "</p><p>Years : " + years + "</p>")
+        var friendly = humanSpan(dt1, dt2);
+        $("#pnlResult").html("<p><strong>" + friendly + "</strong></p><hr/><p>Seconds : " + seconds + "</p><p>Minutes : " + minutes + "</p><p>Hours : " + hours + "</p><p>Days : " + days + "</p><p>Weeks : " + weeks + "</p><p>Months : " + months + "</p><p>Years : " + years + "</p>")
 						.parent()
 						.hide()
 						.removeClass("hide")
