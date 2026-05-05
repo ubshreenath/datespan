@@ -1,7 +1,7 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home3/a1669xat/public_html/datespan.com
+    - export DEPLOYPATH=$HOME/public_html/datespan.com
     - /bin/mkdir -p $DEPLOYPATH/scripts
     - /bin/mkdir -p $DEPLOYPATH/styles/images
     - /bin/mkdir -p $DEPLOYPATH/fonts
