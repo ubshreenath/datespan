@@ -49,10 +49,9 @@ $(function () {
 						.parent()
 						.hide()
 						.removeClass("hide")
-						.slideDown("slow");
-		$("body").animate({scrollTop: $("#pnlResult").offset().top}, 800);
-						
-        //alert(dtSpan.getHours());
+						.slideDown("slow", function () {
+							$("html, body").animate({scrollTop: $("#pnlResult").offset().top}, 500);
+						});
     });
     $("#btnCalculate2").click(function () {
         var dt1 = moment($("#dtMain").val());
@@ -71,7 +70,8 @@ $(function () {
         }
         //console.log(dt2.calendar());
         $("#pnlResult2hdr").html(n + " " + unit + (addsub==0?" before ":" from ") + temp.calendar() + " is: ");
-        $("#pnlResult2").html(dt1.calendar() + " ( " + dt1.format("dddd, MMMM Do YYYY") + " )").parent().hide().removeClass("hide").slideDown("slow").scrollTop();
-		$("body").animate({scrollTop: $("#pnlResult2hdr").offset().top}, 800);
+        $("#pnlResult2").html(dt1.calendar() + " ( " + dt1.format("dddd, MMMM Do YYYY") + " )").parent().hide().removeClass("hide").slideDown("slow", function () {
+			$("html, body").animate({scrollTop: $("#pnlResult2hdr").offset().top}, 500);
+		});
     });
 });
