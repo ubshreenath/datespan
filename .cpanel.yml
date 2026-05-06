@@ -3,19 +3,12 @@ deployment:
   tasks:
     - export DEPLOYPATH=$HOME/public_html/datespan.com
     - /bin/mkdir -p $DEPLOYPATH/scripts
-    - /bin/mkdir -p $DEPLOYPATH/styles/images
-    - /bin/mkdir -p $DEPLOYPATH/fonts
+    - /bin/mkdir -p $DEPLOYPATH/styles
     - /bin/mkdir -p $DEPLOYPATH/images
     - /bin/cp index.htm $DEPLOYPATH/
     - /bin/cp scripts/addDatePicker.js $DEPLOYPATH/scripts/
     - /bin/cp scripts/humanSpan.js $DEPLOYPATH/scripts/
-    - /bin/cp scripts/modernizr-custom.js $DEPLOYPATH/scripts/
     - /bin/cp scripts/moment.min.js $DEPLOYPATH/scripts/
-    - /bin/cp scripts/html5shiv.js $DEPLOYPATH/scripts/
-    - /bin/cp scripts/respond.min.js $DEPLOYPATH/scripts/
     - /bin/cp styles/bootstrap.min.css $DEPLOYPATH/styles/
     - /bin/cp styles/DateSpan.css $DEPLOYPATH/styles/
-    - /bin/cp styles/jquery-ui.min.css $DEPLOYPATH/styles/
-    - /bin/cp styles/images/* $DEPLOYPATH/styles/images/
-    - /bin/cp -r fonts/ $DEPLOYPATH/fonts/
     - /bin/cp -r images/ $DEPLOYPATH/images/
